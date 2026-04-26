@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies — Fail Smarter</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .filter-bar { display:flex; gap:0.5rem; padding:2rem 0; border-bottom:1px solid var(--border); margin-bottom:0; flex-wrap:wrap; }
+    .filter-btn { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 0.9rem; border:1px solid var(--border); background:transparent; color:var(--muted); cursor:pointer; transition:all 0.15s; }
+    .filter-btn:hover { border-color:var(--white); color:var(--white); }
+    .filter-btn.active { border-color:var(--signal); color:var(--signal); }
+    .case-row { display:grid; grid-template-columns:5rem 1fr auto; gap:2.5rem; align-items:start; padding:2.5rem 0; border-bottom:1px solid var(--border); cursor:pointer; transition:background 0.15s; }
+    .case-row:hover { background:var(--surface); padding-left:0.75rem; padding-right:0.75rem; margin:0 -0.75rem; }
+    .case-row-num { font-family:var(--font-display); font-size:3.5rem; color:var(--border); line-height:1; padding-top:0.2rem; }
+    .case-row-main h3 { font-size:1.75rem; color:var(--white); margin-bottom:0.6rem; }
+    .case-row-main p { font-size:0.88rem; color:var(--muted); max-width:55ch; }
+    .case-row-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.85rem; }
+    .case-tag { font-family:var(--font-mono); font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); padding:0.18rem 0.5rem; }
+    .case-row-right { display:flex; flex-direction:column; align-items:flex-end; gap:0.85rem; min-width:7rem; }
+    .ratio-block .rl { font-family:var(--font-mono); font-size:0.58rem; color:var(--muted); letter-spacing:0.08em; text-align:right; }
+    .ratio-block .rv { font-family:var(--font-display); font-size:2rem; color:var(--white); line-height:1.1; text-align:right; }
+    .pending { font-family:var(--font-mono); font-size:0.58rem; color:var(--muted); letter-spacing:0.08em; }
+    @media(max-width:640px){ .case-row{grid-template-columns:1fr;} .case-row-right{align-items:flex-start;flex-direction:row;align-items:center;} }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Fail <em>Smarter</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="framework.html">Framework</a></li>
+    <li><a href="cases.html" class="active">Case Studies</a></li>
+    <li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+<div class="issue-bar">
+  <span>Every idea. Same framework.</span><span class="issue-title">Case Studies</span><span>Some survive. Most don't.</span>
+</div>
+<section style="padding:5rem 0 3rem; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">The analyses</div>
+    <h1>Case<br><em>Studies.</em></h1>
+    <p style="max-width:52ch; margin-top:2rem; color:var(--muted);">Ideas that cleared the floor. Ideas that didn't. Finding out something doesn't work is as useful as finding out it does.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Build</button><button class="filter-btn">Test</button>
+    <button class="filter-btn">Park</button><button class="filter-btn">Kill</button>
+    <button class="filter-btn">Enrich</button>
+  </div>
+  <div class="case-row">
+    <div class="case-row-num">01</div>
+    <div class="case-row-main">
+      <h3>Fail Smarter Itself</h3>
+      <p>Is this project a viable business? The most honest possible first case study — running the framework on itself. Spoiler: it's Class C.</p>
+      <div class="case-row-tags"><span class="case-tag">Digital Media</span><span class="case-tag">Content</span><span class="case-tag">Class C</span></div>
+    </div>
+    <div class="case-row-right">
+      <span class="verdict verdict-enrich">Enrich</span>
+      <div class="ratio-block"><div class="rl">NRR / OPEX</div><div class="rv">TBD</div></div>
+      <span class="pending">Analysis pending</span>
+    </div>
+  </div>
+  <div class="case-row">
+    <div class="case-row-num">02</div>
+    <div class="case-row-main">
+      <h3>AI Wall Art</h3>
+      <p>AI-generated images on canvas or metal. Low barrier to entry, high commoditization risk. Does the unit economics survive margin compression?</p>
+      <div class="case-row-tags"><span class="case-tag">Digital Product</span><span class="case-tag">Print on Demand</span><span class="case-tag">AI</span></div>
+    </div>
+    <div class="case-row-right">
+      <span class="verdict verdict-kill">Kill</span>
+      <div class="ratio-block"><div class="rl">NRR / OPEX</div><div class="rv">TBD</div></div>
+      <span class="pending">Analysis pending</span>
+    </div>
+  </div>
+  <div class="case-row">
+    <div class="case-row-num">03</div>
+    <div class="case-row-main">
+      <h3>US Rental / Section 8</h3>
+      <p>Government-backed tenant payments and lower vacancy risk. Cross-border complexity from Canada is the primary unknown.</p>
+      <div class="case-row-tags"><span class="case-tag">Real Estate</span><span class="case-tag">Capital Asset</span><span class="case-tag">Cross-border</span></div>
+    </div>
+    <div class="case-row-right">
+      <span class="verdict verdict-park">Park</span>
+      <div class="ratio-block"><div class="rl">NRR / OPEX</div><div class="rv">TBD</div></div>
+      <span class="pending">Analysis pending</span>
+    </div>
+  </div>
+  <div class="case-row">
+    <div class="case-row-num">04</div>
+    <div class="case-row-main">
+      <h3>Art Flipping</h3>
+      <p>Acquire undervalued wall art through garage sales, Facebook Marketplace, estate sales. Restoration and reframing as value add.</p>
+      <div class="case-row-tags"><span class="case-tag">Physical Arbitrage</span><span class="case-tag">Resell</span></div>
+    </div>
+    <div class="case-row-right">
+      <span class="verdict verdict-test">Test</span>
+      <div class="ratio-block"><div class="rl">NRR / OPEX</div><div class="rv">TBD</div></div>
+      <span class="pending">Analysis pending</span>
+    </div>
+  </div>
+  <div class="case-row" style="margin-bottom:6rem;">
+    <div class="case-row-num">05</div>
+    <div class="case-row-main">
+      <h3>Vocal-Free Vinyls</h3>
+      <p>AI vocal removal from songs, pressed to vinyl. Strong consumer appeal. Significant IP and licensing risk may kill it before the math is run.</p>
+      <div class="case-row-tags"><span class="case-tag">Digital Product</span><span class="case-tag">Physical</span><span class="case-tag">IP Risk</span></div>
+    </div>
+    <div class="case-row-right">
+      <span class="verdict verdict-kill">Kill</span>
+      <div class="ratio-block"><div class="rl">NRR / OPEX</div><div class="rv">TBD</div></div>
+      <span class="pending">Analysis pending</span>
+    </div>
+  </div>
+</div>
+<footer><div class="footer-logo">Fail <em>Smarter</em></div><p>Framework. Analysis. No hype.</p></footer>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

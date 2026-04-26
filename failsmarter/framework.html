@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framework — Fail Smarter</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero { padding:5rem 0 4rem; border-bottom:1px solid var(--border); }
+    .fw-block { padding:4rem 0; border-bottom:1px solid var(--border); display:grid; grid-template-columns:11rem 1fr; gap:4rem; }
+    .fw-block-aside .layer-tag { font-family:var(--font-mono); font-size:0.62rem; color:var(--signal); letter-spacing:0.14em; margin-bottom:0.6rem; }
+    .fw-block-aside h3 { font-size:1.8rem; color:var(--white); }
+    .fw-block-body p { margin-bottom:1.1rem; }
+    .fw-block-body ul { list-style:none; margin:1.25rem 0; display:flex; flex-direction:column; gap:0.45rem; }
+    .fw-block-body ul li { font-size:0.9rem; color:var(--muted); padding-left:1.25rem; position:relative; }
+    .fw-block-body ul li::before { content:'—'; position:absolute; left:0; color:var(--signal); }
+    .def-grid { display:grid; grid-template-columns:repeat(3,1fr); background:var(--border); border:1px solid var(--border); gap:1px; margin:2rem 0; }
+    .def-item { background:var(--black); padding:1.75rem; }
+    .def-term { font-family:var(--font-mono); font-size:0.65rem; color:var(--signal); letter-spacing:0.12em; margin-bottom:0.75rem; }
+    .def-item p { font-size:0.85rem; color:var(--muted); line-height:1.6; }
+    .verdict-strip { display:grid; grid-template-columns:repeat(5,1fr); background:var(--border); border:1px solid var(--border); gap:1px; margin:2rem 0; }
+    .verdict-cell { background:var(--black); padding:1.75rem; }
+    .verdict-cell p { font-size:0.8rem; color:var(--muted); margin-top:0.75rem; line-height:1.55; }
+    .threshold-table { width:100%; border-collapse:collapse; margin:2rem 0; }
+    .threshold-table th { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-align:left; padding:0.65rem 1rem; border-bottom:1px solid var(--border); }
+    .threshold-table td { padding:1rem; font-size:0.86rem; color:var(--muted); border-bottom:1px solid var(--border); vertical-align:top; }
+    .threshold-table td:first-child { font-family:var(--font-mono); color:var(--signal); font-size:0.7rem; white-space:nowrap; }
+    .threshold-table td strong { color:var(--white); font-weight:400; }
+    .idea-class-grid { display:grid; grid-template-columns:repeat(3,1fr); background:var(--border); border:1px solid var(--border); gap:1px; margin:2rem 0; }
+    .idea-class { background:var(--black); padding:2rem; }
+    .idea-class .class-tag { font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.14em; margin-bottom:1rem; }
+    .idea-class h4 { font-family:var(--font-display); font-size:1.2rem; color:var(--white); margin-bottom:0.6rem; letter-spacing:0.04em; }
+    .idea-class p { font-size:0.82rem; color:var(--muted); line-height:1.55; }
+    @media(max-width:768px){ .fw-block{grid-template-columns:1fr;gap:1.5rem;} .def-grid{grid-template-columns:1fr;} .verdict-strip{grid-template-columns:1fr 1fr;} .idea-class-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Fail <em>Smarter</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="framework.html" class="active">Framework</a></li>
+    <li><a href="cases.html">Case Studies</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+<div class="issue-bar">
+  <span>Methodology</span><span class="issue-title">The Framework</span><span>v2.1</span>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">Methodology</div>
+    <h1>Frame<em>work.</em></h1>
+    <p style="max-width:58ch; margin-top:1.75rem;">Five layers. One formula. Five verdicts. Three idea classes. The framework is the asset — not any single idea. Personal variables are declared transparently so others can substitute their own.</p>
+  </div>
+</section>
+
+<section style="padding:4rem 0; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">Idea Classification</div>
+    <h2>Three Classes</h2>
+    <p style="max-width:58ch; color:var(--muted); margin-top:1rem; margin-bottom:0;">Not all ideas fit the same analytical lens. Classification is done before analysis begins — not chosen to make the idea look better.</p>
+    <div class="idea-class-grid">
+      <div class="idea-class">
+        <div class="class-tag" style="color:#4ade80;">CLASS A — VIABLE</div>
+        <h4>From the Start</h4>
+        <p>Clears NRR/OPEX ≥ 1.5× within ramp period. Standard five-layer analysis. Burn ceiling applies. Verdict: Build / Test / Park / Kill.</p>
+      </div>
+      <div class="idea-class">
+        <div class="class-tag" style="color:#facc15;">CLASS B — INVESTMENT</div>
+        <h4>Horizon Ideas</h4>
+        <p>Phase 1 burn tracked. Phase 2 formula applied. ROI/Payback layer required. Both ratio floor and recoup rule must be satisfied independently.</p>
+      </div>
+      <div class="idea-class">
+        <div class="class-tag" style="color:#60a5fa;">CLASS C — ENRICH</div>
+        <h4>Hobby / Enrichment</h4>
+        <p>Fails financial floor or burn ceiling. Non-financial return declared. Loss ceiling and milestone trigger required. Verdict: Enrich.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">The Hard Floor</div>
+    <h2>Formula</h2>
+    <div class="formula-block" style="margin-top:2rem;">
+      <div class="formula-expr">NRR / OPEX <span class="floor">≥ 1.5</span> &nbsp;→&nbsp; worth pursuing</div>
+      <div class="formula-note">Every idea must clear this independently<br>No exceptions. No narrative bias.</div>
+    </div>
+    <div class="def-grid">
+      <div class="def-item"><div class="def-term">NRR</div><p>Gross Revenue minus COGS. What actually lands after the direct cost of producing and delivering one unit.</p></div>
+      <div class="def-item"><div class="def-term">COGS</div><p>Anything directly tied to producing one unit. When automation replaces a human task, cost converts from OPEX to COGS — improving ratio dynamics significantly.</p></div>
+      <div class="def-item"><div class="def-term">OPEX</div><p>Hours consumed × <strong style="color:var(--white);">$17 CAD/hr</strong>. Ontario minimum wage. The most accessible zero-friction alternative for available hours. OPEX = $0 in months where no output is produced.</p></div>
+    </div>
+    <div style="margin-top:3rem;">
+      <div class="label" style="margin-bottom:1rem;">Growth Component</div>
+      <div class="formula-block">
+        <div class="formula-expr">Growth Score = (Market Size / CAC) × Scalability Modifier</div>
+        <div class="formula-note">0.5 = linear &nbsp;|&nbsp; 1.0 = moderate &nbsp;|&nbsp; 2.0 = high leverage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:2rem;">
+  <div class="container">
+    <div style="padding:3.5rem 0 2.5rem;">
+      <div class="label" style="margin-bottom:1rem;">Analysis Structure</div>
+      <h2>Five Layers</h2>
+    </div>
+    <div class="fw-layers" style="margin-bottom:3rem;">
+      <div class="fw-layer"><div class="fw-layer-num">01</div><h4>Concept</h4><p>What is it. Where from. What problem. No selling.</p></div>
+      <div class="fw-layer"><div class="fw-layer-num">02</div><h4>Market</h4><p>Who buys this. How many. How reachable. Timing.</p></div>
+      <div class="fw-layer"><div class="fw-layer-num">03</div><h4>Economics</h4><p>Unit economics. Margin. Ratio at three scales.</p></div>
+      <div class="fw-layer"><div class="fw-layer-num">04</div><h4>Execution</h4><p>Hours to first dollar. Capital. Automation timeline.</p></div>
+      <div class="fw-layer"><div class="fw-layer-num">05</div><h4>Risk</h4><p>Legal. Competitive. Platform. Personal fit.</p></div>
+    </div>
+
+    <div class="fw-block">
+      <div class="fw-block-aside"><div class="layer-tag">LAYER 01</div><h3>Concept</h3></div>
+      <div class="fw-block-body">
+        <p>Honest description before any analysis begins. No selling. No optimistic framing. Define scope clearly so analysis is not contaminated by narrative bias.</p>
+        <ul><li>Plain description — what it is and how it works</li><li>Origin — where the idea came from</li><li>The problem or desire it addresses</li><li>What this idea explicitly is not</li><li>Class assignment — A, B, or C — stated before proceeding</li></ul>
+      </div>
+    </div>
+    <div class="fw-block">
+      <div class="fw-block-aside"><div class="layer-tag">LAYER 02</div><h3>Market</h3></div>
+      <div class="fw-block-body">
+        <p>Viable unit economics in a market that is too small, too saturated, or too hard to reach is still a failing business.</p>
+        <ul><li>Total Addressable Market in dollars, not people</li><li>Serviceable Addressable Market</li><li>Year 1 conservative target — cited, not assumed</li><li>Customer Acquisition Cost and channel</li><li>Timing — growing, saturating, or shifting</li><li>Competition density and defensibility</li></ul>
+      </div>
+    </div>
+    <div class="fw-block">
+      <div class="fw-block-aside"><div class="layer-tag">LAYER 03</div><h3>Economics</h3></div>
+      <div class="fw-block-body">
+        <p>The formula applied. Unit economics built bottom-up, projected at three scale points. Lifestyle threshold mapping connects dollar amounts to concrete life changes.</p>
+        <ul><li>Revenue per unit and pricing rationale</li><li>Full COGS breakdown — every variable cost named</li><li>NRR/OPEX ratio at launch, steady-state, and scale</li><li>Automation conversion timeline with trigger conditions</li><li>Lifestyle threshold mapping</li></ul>
+      </div>
+    </div>
+    <div class="fw-block">
+      <div class="fw-block-aside"><div class="layer-tag">LAYER 04</div><h3>Execution</h3></div>
+      <div class="fw-block-body">
+        <p>What it actually takes to get to first dollar. Not best case — the honest effort required to launch and sustain.</p>
+        <ul><li>Hours to launch — broken down by task</li><li>Capital required before first revenue</li><li>Skills gap — what needs to be learned or hired</li><li>Automation potential with NRR trigger conditions</li><li>Ongoing monthly load at steady state</li></ul>
+      </div>
+    </div>
+    <div class="fw-block" style="border-bottom:1px solid var(--border);">
+      <div class="fw-block-aside"><div class="layer-tag">LAYER 05</div><h3>Risk</h3></div>
+      <div class="fw-block-body">
+        <p>Risk assessment without catastrophizing or minimizing. What can kill this and how likely.</p>
+        <ul><li>Legal and regulatory exposure</li><li>Competitive moat and replication speed</li><li>Platform dependency risk</li><li>Operational single points of failure</li><li>Personal fit through the build phase</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0; border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">The Output</div>
+    <h2>Verdict</h2>
+    <p style="max-width:55ch; color:var(--muted); margin-top:1rem; margin-bottom:2rem;">Not a sixth layer — the output of the five. A rating, supporting scores, and a plain English paragraph that stands alone.</p>
+    <div class="verdict-strip">
+      <div class="verdict-cell"><span class="verdict verdict-build">Build</span><p>Clears 1.5×. Lift manageable. Risk contained. Start now.</p></div>
+      <div class="verdict-cell"><span class="verdict verdict-test">Test</span><p>Clears on paper. Key assumptions unverified. Run cheapest possible test first.</p></div>
+      <div class="verdict-cell"><span class="verdict verdict-park">Park</span><p>Viable model. Wrong timing or conditions. Document trigger for revisiting.</p></div>
+      <div class="verdict-cell"><span class="verdict verdict-kill">Kill</span><p>Does not clear 1.5×. No credible path. Recoup fails floor. Move on.</p></div>
+      <div class="verdict-cell"><span class="verdict verdict-enrich">Enrich</span><p>Fails financial floor. Non-financial return declared. Loss ceiling required. Eyes open.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0 5rem;">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">Context Layer</div>
+    <h2>Lifestyle Thresholds</h2>
+    <p style="max-width:60ch; color:var(--muted); margin-top:1rem; margin-bottom:2rem;">Personal and declared. Operate at portfolio level — not per idea. Any idea clearing 1.5× is worth building. Aggregate portfolio NRR moves thresholds incrementally.</p>
+    <table class="threshold-table">
+      <thead><tr><th>Threshold</th><th>Monthly CAD</th><th>What It Unlocks</th><th>Hrs Freed</th></tr></thead>
+      <tbody>
+        <tr><td>T1 — Friction Reduction</td><td><strong>~$1,750</strong></td><td>House cleaning, laundry, car detailing, grocery delivery.</td><td>~40 hrs/mo</td></tr>
+        <tr><td>T2 — Meaningful Friction</td><td><strong>~$2,900</strong></td><td>T1 plus meal prep delivery and daily dog walker.</td><td>+35 hrs/mo</td></tr>
+        <tr><td>T4 — Income Replacement</td><td><strong>~$12,000</strong></td><td>W2 exit. Full time and schedule sovereignty.</td><td>Full W2</td></tr>
+        <tr><td>T5 — Lifestyle Upgrade</td><td><strong>~$24–36k</strong></td><td>Structural abundance. Geographic freedom. No constraints.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Fail <em>Smarter</em></div>
+  <p>Framework. Analysis. No hype.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Odds You're Getting Wrong — Fail Smarter</title>
+  <meta name="description" content="Most of us are mispricing probability in two directions simultaneously. The lottery and insurance tell the same story from opposite ends." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .post-hero {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+      max-width: 760px;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .post-body {
+      max-width: 680px;
+      padding: 4rem 0 6rem;
+    }
+
+    .post-body h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--white);
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .post-body h2:first-child { border-top: none; padding-top: 0; }
+
+    .post-body p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #c8c4bc;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body strong { color: var(--white); font-weight: 500; }
+    .post-body em { font-style: italic; color: #9a9690; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--signal);
+      padding: 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+      background: var(--surface);
+    }
+    .pull-quote p {
+      font-size: 1.15rem !important;
+      line-height: 1.65 !important;
+      color: var(--white) !important;
+      margin: 0 !important;
+      font-style: italic;
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.92rem;
+    }
+    .data-table th {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: left;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: #c8c4bc;
+    }
+    .data-table td:first-child { color: var(--white); }
+    .data-table tr:last-child td {
+      color: var(--signal);
+      font-weight: 500;
+      border-bottom: none;
+    }
+
+    /* Comparison table */
+    .compare-table { width:100%; border-collapse:collapse; margin:2rem 0; }
+    .compare-table th { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); text-align:left; padding:0.65rem 1rem; border-bottom:1px solid var(--border); }
+    .compare-table td { padding:0.85rem 1rem; border-bottom:1px solid var(--border); color:#c8c4bc; font-size:0.92rem; }
+    .compare-table td:first-child { color:var(--white); }
+    .compare-table .highlight td { color:var(--signal); }
+    .compare-table .highlight td:first-child { color:#c8c4bc; }
+
+    /* Stat callout */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--border);
+      border: 1px solid var(--border);
+      gap: 1px;
+      margin: 2.5rem 0;
+    }
+    .stat-item {
+      background: var(--surface);
+      padding: 1.75rem;
+    }
+    .stat-item .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--signal);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-item .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Post footer */
+    .post-footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+      max-width: 680px;
+    }
+    .post-footer .sources {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+    .post-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--signal);
+    }
+    .post-nav a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Fail <em>Smarter</em></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../framework.html">Framework</a></li>
+    <li><a href="../cases.html">Case Studies</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+<div class="issue-bar">
+  <span>Off The Charts</span>
+  <span class="issue-title">Issue 001</span>
+  <span>Probability. Honestly.</span>
+</div>
+
+<div class="container">
+
+  <div class="post-hero">
+    <div class="post-meta">
+      <span class="verdict verdict-enrich" style="color:#60a5fa; border-color:#60a5fa;">Off The Charts</span>
+      <span class="mono muted">Framework v2.1 · Issue 001</span>
+    </div>
+    <h1>The Odds<br>You're Getting<br><em>Wrong.</em></h1>
+    <p style="max-width:56ch; margin-top:1.75rem; font-size:1.1rem; color:var(--muted); line-height:1.75;">Most people are mispricing probability in two directions simultaneously. The lottery and insurance tell the same story from opposite ends — and the financial consequences compound against you for decades.</p>
+  </div>
+
+  <div class="post-body">
+
+    <p>There's a conversation most people have had at some point. Someone in the office mentions they bought lottery tickets for the weekend draw, and someone else says, half-joking: <em>"You know the odds of winning are basically zero, right?"</em></p>
+
+    <p>The first person shrugs. <em>"Yeah, but someone has to win."</em></p>
+
+    <p>They're not wrong. Someone does have to win. The problem isn't the lottery itself. The problem is that most of us are systematically mispricing probability in two directions simultaneously — and the financial consequences of those two errors compound against us for decades without anyone pointing it out.</p>
+
+    <p>This is that conversation.</p>
+
+    <h2>The Lottery: What You're Actually Buying</h2>
+
+    <p>Let's start with the numbers, because they're the only thing that matters here.</p>
+
+    <p>Lotto 6/49 costs $3 per entry. Twice a week. Pick six numbers from 1 to 49. The jackpot starts at $5 million and the Gold Ball can push it beyond $60 million on a good run.</p>
+
+    <p>The odds of matching all six numbers are <strong>1 in 13,983,816</strong>. To put that in terms you can feel: if you bought one ticket every week without missing a single draw, you would expect to win the jackpot once every 269,000 years. Not a typo. Two hundred and sixty-nine thousand years.</p>
+
+    <p>But jackpots aside, here's what the math says about every dollar you spend on a 6/49 ticket: you get approximately <strong>$0.65 back in expected value</strong>. The remaining $0.35 goes to OLG. Always. That ratio is fixed by the structure of the game and doesn't improve no matter how many tickets you buy, no matter how carefully you choose your numbers, no matter how long a jackpot has been rolling over.</p>
+
+    <p>If you spent $415 a month on lottery tickets — consistently, for 23 years — here's where you'd end up:</p>
+
+    <table class="data-table">
+      <thead><tr><th>Metric</th><th>Amount (CAD)</th></tr></thead>
+      <tbody>
+        <tr><td>Total spent over 23 years</td><td>$114,540</td></tr>
+        <tr><td>Expected return</td><td>~$74,450</td></tr>
+        <tr><td>Same amount in an index fund at 7%/yr</td><td>~$285,000</td></tr>
+        <tr><td><strong>Expected net loss vs index fund</strong></td><td><strong>~$325,000</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>That $325,000 gap isn't the result of bad luck. It was always visible in the math. It was always the answer. It just wasn't the question most people were asking.</p>
+
+    <div class="pull-quote">
+      <p>"The ticket isn't really buying probability. It's buying a 48-hour window where imagining a different life is perfectly rational."</p>
+    </div>
+
+    <h2>So Why Do We Do It?</h2>
+
+    <p>This isn't a judgment. The lottery exists for a reason — it sells something real. The $3 you spend buys the conversation, the daydream, the slightly elevated heartbeat on Saturday night. That's a legitimate transaction if you know what you're buying.</p>
+
+    <p>The problem starts when the ticket becomes a <strong>strategy</strong>.</p>
+
+    <h2>Now Flip It: The Events You're Not Pricing</h2>
+
+    <p>Here's where it gets interesting.</p>
+
+    <p>The same person who shrugs off the lottery odds will often resist buying disability insurance because it feels like paying for something they'll probably never need. The instinct is understandable. Insurance is boring. The premium leaves your account every month and nothing happens. It feels like losing.</p>
+
+    <p>But look at what the actual odds say.</p>
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">40%</div>
+        <div class="stat-label">Canadians disabled 90+ days before 65</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1 in 10</div>
+        <div class="stat-label">Canadians who die before reaching 65</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">44%</div>
+        <div class="stat-label">Lifetime probability of developing cancer</div>
+      </div>
+    </div>
+
+    <p>The Society of Actuaries puts the average 40-year-old's chance of experiencing a long-term disability before 65 at roughly 20%, with one in seven workers disabled for five years or more before retirement age. These are not rare events. They are statistically common outcomes for ordinary working people.</p>
+
+    <p>Now let's put the numbers side by side:</p>
+
+    <table class="compare-table">
+      <thead><tr><th>Event</th><th>Probability</th></tr></thead>
+      <tbody>
+        <tr class="highlight"><td>Winning Lotto 6/49 jackpot</td><td>1 in 13,983,816</td></tr>
+        <tr><td>Dying before age 65 in Canada</td><td>~1 in 10</td></tr>
+        <tr><td>Long-term disability before 65</td><td>~1 in 5 to 1 in 3</td></tr>
+        <tr><td>Developing cancer in your lifetime</td><td>~44% — nearly 1 in 2</td></tr>
+      </tbody>
+    </table>
+
+    <p>The event people spend money <em>hoping</em> for has odds of one in fourteen million. The events people resist spending money <em>protecting</em> against have odds ranging from one in ten to nearly one in two.</p>
+
+    <div class="pull-quote">
+      <p>"We are spending on the improbable and underinsuring the likely. Consistently. Across the population. At scale."</p>
+    </div>
+
+    <h2>Why This Happens</h2>
+
+    <p>This isn't stupidity. It's a well-documented feature of human cognition called <em>probability neglect</em> — the tendency to overweight or underweight extreme probabilities based on how emotionally vivid they are.</p>
+
+    <p>Winning the jackpot is vivid. There are billboards. There are winners. There are interviews on the news. The brain treats "I could win" as meaningfully probable because it can construct a detailed mental image of what winning looks like.</p>
+
+    <p>Becoming disabled is not vivid. There are no billboards. The brain treats it as remote because it can't construct the scenario easily — and because it's unpleasant to try.</p>
+
+    <p>The result: we buy the dream and skip the protection. Both decisions made intuitively. Both pointing in the wrong direction.</p>
+
+    <h2>What This Has to Do With Business Ideas</h2>
+
+    <p>This post lives on a site about analyzing business ideas, so here's the bridge.</p>
+
+    <p>The same cognitive error that misprices lottery tickets also misprices business ideas. We overweight vivid upside — the version where the idea works, scales, and changes our life — and underweight the realistic probability of failure, the cumulative cost of a long build phase, and the opportunity cost of time spent on something that doesn't clear the floor.</p>
+
+    <p>That's exactly why the framework exists. Not to kill optimism, but to price it honestly. To ask: <em>what does the math actually say, before the daydream takes over?</em></p>
+
+    <p>The lottery fails the framework with mathematical certainty. Most business ideas fail it too — but not all of them. And the ones that don't deserve to be found. That's the exercise.</p>
+
+    <h2>The Bottom Line</h2>
+
+    <p>Play the lottery if it brings you joy. Buy the $3 dream on a Wednesday. There's nothing wrong with it as entertainment, understood as entertainment.</p>
+
+    <p>But do not mistake it for a strategy. The house takes 35 cents of every dollar, every draw, forever. There is no system, no pattern, no frequency analysis that changes this. The expected value is fixed and it is negative.</p>
+
+    <p>Meanwhile, the odds of something going seriously wrong with your health, your income, or your life before you reach 65 are not remote. They are, depending on the specific event, somewhere between one in ten and nearly one in two.</p>
+
+    <p><strong>Price both of those honestly. Act accordingly.</strong></p>
+
+    <p>That's all this framework ever asks.</p>
+
+  </div>
+
+  <div class="post-footer">
+    <div class="sources">
+      Sources: OLG.ca · Office of the Superintendent of Financial Institutions Canada ·
+      Society of Actuaries · Statistics Canada · Canada Life ·
+      PubMed / Statistics Canada Cancer Registry ·
+      York University Mathematics Department (Lotto 6/49 probability analysis)
+    </div>
+    <div class="post-nav">
+      <a href="../blog.html">← All posts</a>
+      <span class="mono muted">Off The Charts — Issue 001</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Fail <em>Smarter</em></div>
+  <p>Framework. Analysis. No hype.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[CASE TITLE] — Fail Smarter</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .case-hero { padding:5rem 0 3rem; border-bottom:1px solid var(--border); }
+    .case-meta-bar { display:flex; gap:2rem; align-items:center; margin-bottom:2rem; flex-wrap:wrap; }
+    .scorecard { display:grid; grid-template-columns:repeat(4,1fr); background:var(--border); border:1px solid var(--border); gap:1px; margin:3rem 0; }
+    .scorecard-item { background:var(--surface); padding:1.75rem; }
+    .sc-label { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem; }
+    .sc-val { font-family:var(--font-display); font-size:2rem; line-height:1; color:var(--white); }
+    .sc-val.highlight { color:var(--signal); }
+    .sc-note { font-family:var(--font-mono); font-size:0.62rem; color:var(--muted); margin-top:0.4rem; }
+    .layer-section { padding:4rem 0; border-bottom:1px solid var(--border); display:grid; grid-template-columns:11rem 1fr; gap:4rem; }
+    .layer-tag { font-family:var(--font-mono); font-size:0.65rem; color:var(--signal); letter-spacing:0.15em; margin-bottom:0.6rem; }
+    .layer-section h2 { font-size:2.5rem; color:var(--white); }
+    .layer-body p { margin-bottom:1.1rem; }
+    .layer-body h4 { font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); margin:2rem 0 0.75rem; }
+    .layer-body ul { list-style:none; display:flex; flex-direction:column; gap:0.45rem; margin-bottom:1.5rem; }
+    .layer-body ul li { font-size:0.88rem; color:var(--muted); padding-left:1.25rem; position:relative; }
+    .layer-body ul li::before { content:'—'; position:absolute; left:0; color:var(--signal); }
+    .data-table { width:100%; border-collapse:collapse; margin:1.5rem 0; }
+    .data-table th { font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-align:left; padding:0.6rem 0.75rem; border-bottom:1px solid var(--border); }
+    .data-table td { font-size:0.85rem; color:var(--muted); padding:0.75rem; border-bottom:1px solid var(--border); }
+    .data-table td:first-child { color:var(--white); }
+    .data-table .total td { color:var(--white); border-top:1px solid var(--border); }
+    .verdict-box { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--signal); padding:3rem; margin-top:2.5rem; }
+    .verdict-box .v-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; gap:2rem; flex-wrap:wrap; }
+    .verdict-box h3 { font-size:3rem; color:var(--signal); }
+    .verdict-scores { display:flex; gap:2.5rem; align-items:center; }
+    .v-score .num { font-family:var(--font-display); font-size:2.5rem; color:var(--white); line-height:1; }
+    .v-score .lbl { font-family:var(--font-mono); font-size:0.58rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.25rem; }
+    .verdict-box .plain-english { font-size:1rem; color:#b8b4ac; line-height:1.8; border-top:1px solid var(--border); padding-top:1.5rem; }
+    .nav-cases { display:flex; justify-content:space-between; padding:2.5rem 0; border-top:1px solid var(--border); margin-top:4rem; }
+    .nav-case-link { font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--signal); }
+    .nav-case-link:hover { text-decoration:underline; }
+    @media(max-width:768px){ .layer-section{grid-template-columns:1fr;gap:1.5rem;} .scorecard{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Fail <em>Smarter</em></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../framework.html">Framework</a></li>
+    <li><a href="../cases.html" class="active">Case Studies</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+<div class="issue-bar">
+  <span>CASE — 00X</span><span class="issue-title">[CASE TITLE]</span><span>Class A / B / C</span>
+</div>
+
+<section class="case-hero">
+  <div class="container">
+    <div class="case-meta-bar">
+      <span class="mono muted">CASE — 00X</span>
+      <span class="verdict verdict-build">Build</span>
+      <span class="mono muted">Category · Sub-category · Class A</span>
+    </div>
+    <h1>[CASE<br><em>TITLE]</em></h1>
+    <p style="max-width:62ch; margin-top:1.75rem; font-size:1.05rem; color:var(--muted);">[One paragraph honest description. No selling. What it is, where it came from, what problem it serves.]</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="scorecard">
+    <div class="scorecard-item"><div class="sc-label">NRR / OPEX</div><div class="sc-val highlight">X.X×</div><div class="sc-note">Floor is 1.5×</div></div>
+    <div class="scorecard-item"><div class="sc-label">Monthly NRR</div><div class="sc-val">$X,XXX</div><div class="sc-note">At steady state</div></div>
+    <div class="scorecard-item"><div class="sc-label">Hrs / Month</div><div class="sc-val">XX</div><div class="sc-note">Ongoing OPEX</div></div>
+    <div class="scorecard-item"><div class="sc-label">Threshold</div><div class="sc-val">T1</div><div class="sc-note">Lifestyle level reached</div></div>
+  </div>
+</div>
+
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">LAYER 01</div><h2>Concept</h2></div>
+  <div class="layer-body"><p>[Full description. What it is. Origin. Problem served. Scope clarification. Class assignment with rationale.]</p></div>
+</div></section>
+
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">LAYER 02</div><h2>Market</h2></div>
+  <div class="layer-body">
+    <p>[Who buys this. Buyer characterization.]</p>
+    <h4>Market Size</h4>
+    <table class="data-table"><thead><tr><th>Segment</th><th>Size</th><th>Source / Confidence</th></tr></thead>
+    <tbody>
+      <tr><td>Total Addressable Market</td><td>$X.XB</td><td>[Source] — Anchored</td></tr>
+      <tr><td>Serviceable Addressable Market</td><td>$XXM</td><td>[Rationale]</td></tr>
+      <tr><td>Year 1 Conservative Target</td><td>$XXk</td><td>[Cited anchor]</td></tr>
+    </tbody></table>
+    <h4>Acquisition & Timing</h4>
+    <p>[CAC, channel, timing, competition density.]</p>
+  </div>
+</div></section>
+
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">LAYER 03</div><h2>Economics</h2></div>
+  <div class="layer-body">
+    <h4>Unit Economics</h4>
+    <table class="data-table"><thead><tr><th>Line Item</th><th>Per Unit</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Gross Revenue</td><td>$XX.XX</td><td>Pricing rationale</td></tr>
+      <tr><td>COGS — [Item]</td><td>($X.XX)</td><td></td></tr>
+      <tr class="total"><td>NRR per unit</td><td>$XX.XX</td><td>XX% margin</td></tr>
+    </tbody></table>
+    <h4>Ratio at Three Scales</h4>
+    <table class="data-table"><thead><tr><th>Stage</th><th>Monthly NRR</th><th>Monthly OPEX</th><th>Ratio</th><th>Threshold</th></tr></thead>
+    <tbody>
+      <tr><td>Launch</td><td>$XXX</td><td>$XXX</td><td>X.X×</td><td>—</td></tr>
+      <tr><td>Steady State</td><td>$X,XXX</td><td>$XXX</td><td>X.X×</td><td>T1</td></tr>
+      <tr><td>Scale</td><td>$X,XXX</td><td>$XXX</td><td>X.X×</td><td>T2</td></tr>
+    </tbody></table>
+    <h4>Automation Conversion Timeline</h4>
+    <p>[Which tools trigger at which NRR thresholds. OPEX-to-COGS conversion schedule.]</p>
+  </div>
+</div></section>
+
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">LAYER 04</div><h2>Execution</h2></div>
+  <div class="layer-body">
+    <h4>To First Dollar</h4>
+    <table class="data-table"><thead><tr><th>Task</th><th>Hours</th><th>Capital</th></tr></thead>
+    <tbody>
+      <tr><td>[Setup task]</td><td>X hrs</td><td>$XX</td></tr>
+      <tr class="total"><td>Total to launch</td><td>XX hrs</td><td>$XXX</td></tr>
+    </tbody></table>
+    <h4>Ongoing Load</h4>
+    <p>[Monthly hours at steady state, broken down by task.]</p>
+    <h4>Automation Potential</h4>
+    <p>[What systematizes and when. NRR trigger conditions per tool.]</p>
+  </div>
+</div></section>
+
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">LAYER 05</div><h2>Risk</h2></div>
+  <div class="layer-body">
+    <h4>Legal & Regulatory</h4><p>[IP, licensing, compliance. Severity and likelihood.]</p>
+    <h4>Competitive</h4><p>[Moat, replication speed, defensibility.]</p>
+    <h4>Platform Dependency</h4><p>[Single points of failure in the stack.]</p>
+    <h4>Personal Fit</h4><p>[Sustained motivation and capability match through the build phase.]</p>
+  </div>
+</div></section>
+
+<!-- ROI / PAYBACK — Class B only. Delete this section for Class A ideas. -->
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">CLASS B ONLY</div><h2>ROI / Payback</h2></div>
+  <div class="layer-body">
+    <h4>Phase 1 Burn</h4>
+    <table class="data-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Monthly burn</td><td>$XXX CAD</td></tr>
+      <tr><td>Phase 1 duration (projected)</td><td>XX months</td></tr>
+      <tr><td>Cumulative loss (projected)</td><td>$X,XXX CAD</td></tr>
+      <tr><td>Monthly avg as % of income</td><td>X.X% (ceiling: 5%)</td></tr>
+      <tr><td>Break-even age</td><td>Age XX (ceiling: 65)</td></tr>
+    </tbody></table>
+    <h4>Phase 2 Scenarios</h4>
+    <table class="data-table"><thead><tr><th>Scenario</th><th>Monthly NRR</th><th>NRR/OPEX</th><th>Confidence</th><th>Months to recoup</th></tr></thead>
+    <tbody>
+      <tr><td>Conservative</td><td>$XXX</td><td>X.X×</td><td>Anchored</td><td>XX mo</td></tr>
+      <tr><td>Base</td><td>$X,XXX</td><td>X.X×</td><td>Estimated</td><td>XX mo</td></tr>
+      <tr><td>Optimistic</td><td>$X,XXX</td><td>X.X×</td><td>Speculative</td><td>XX mo</td></tr>
+    </tbody></table>
+    <h4>Recoup Assessment</h4>
+    <p><strong style="color:var(--white);">Underwritten scenario:</strong> [Base / Conservative / Optimistic] — [justification]</p>
+    <p><strong style="color:var(--white);">Recoup vs Phase 1:</strong> XX months recoup ÷ XX months invested = X.X× (floor: 1.0×, personal target: 0.5×)</p>
+    <p><strong style="color:var(--white);">Financing rational:</strong> Yes / No — [NRR/OPEX ≥ 2.0×, confidence Anchored/Estimated, recoup meets target]</p>
+  </div>
+</div></section>
+
+<!-- ENRICH DECLARATIONS — Class C only. Delete this section for Class A/B ideas. -->
+<section class="layer-section"><div class="container" style="display:grid;grid-template-columns:11rem 1fr;gap:4rem;">
+  <div><div class="layer-tag">CLASS C ONLY</div><h2>Enrich Declarations</h2></div>
+  <div class="layer-body">
+    <h4>Non-Financial Return</h4>
+    <p>[State explicitly what the non-financial return is. Must be specific and verifiable — not vague.]</p>
+    <h4>Maximum Cumulative Loss Ceiling</h4>
+    <p>[Maximum total CAD before verdict converts to Kill automatically. Cannot be revised upward without full re-analysis.]</p>
+    <h4>Milestone Reassessment Trigger</h4>
+    <p><strong style="color:var(--white);">Type:</strong> Revenue / Utility / Learning trigger</p>
+    <p><strong style="color:var(--white);">Trigger:</strong> By month [X], [specific measurable condition] must be met or verdict converts to Kill automatically.</p>
+  </div>
+</div></section>
+
+<section style="padding:5rem 0;">
+  <div class="container">
+    <div class="label" style="margin-bottom:1rem;">The Output</div>
+    <h2>Verdict</h2>
+    <div class="verdict-box">
+      <div class="v-top">
+        <h3>BUILD</h3>
+        <div class="verdict-scores">
+          <div class="v-score"><div class="num">X.X×</div><div class="lbl">NRR / OPEX</div></div>
+          <div class="v-score"><div class="num">X.X</div><div class="lbl">Growth Score</div></div>
+          <div class="v-score"><div class="num">T1</div><div class="lbl">Threshold</div></div>
+        </div>
+      </div>
+      <p class="plain-english">[Plain English verdict. 3-5 sentences. Stands alone. What is this idea, does it clear the floor, what is the catch, what is the action.]</p>
+    </div>
+    <div class="nav-cases">
+      <a class="nav-case-link" href="../cases.html">← All cases</a>
+      <a class="nav-case-link" href="#">Next case →</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-logo">Fail <em>Smarter</em></div><p>Framework. Analysis. No hype.</p></footer>
+</body>
+</html>

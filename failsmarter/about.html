@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Fail Smarter</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about-hero { display:grid; grid-template-columns:1fr 360px; gap:5rem; padding:5rem 0; border-bottom:1px solid var(--border); align-items:start; }
+    .facts { display:flex; flex-direction:column; background:var(--border); border:1px solid var(--border); gap:1px; }
+    .fact-row { display:grid; grid-template-columns:7rem 1fr; background:var(--black); }
+    .fact-k { font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); padding:1rem; border-right:1px solid var(--border); display:flex; align-items:center; }
+    .fact-v { font-size:0.85rem; color:var(--white); padding:1rem; display:flex; align-items:center; }
+    .tl-section { padding:4rem 0; border-bottom:1px solid var(--border); }
+    .tl-items { display:flex; flex-direction:column; margin-top:2.5rem; }
+    .tl-row { display:grid; grid-template-columns:8rem 1fr; gap:2rem; padding:1.75rem 0; border-bottom:1px solid var(--border); }
+    .tl-row:first-child { border-top:1px solid var(--border); }
+    .tl-period { font-family:var(--font-mono); font-size:0.62rem; color:var(--signal); letter-spacing:0.06em; padding-top:0.3rem; }
+    .tl-content h4 { font-family:var(--font-display); font-size:1.15rem; letter-spacing:0.04em; color:var(--white); margin-bottom:0.2rem; }
+    .tl-co { font-family:var(--font-mono); font-size:0.62rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.6rem; }
+    .tl-content p { font-size:0.84rem; color:var(--muted); }
+    .phil-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2.5rem; }
+    .phil-item { border-top:1px solid var(--border); padding-top:1.5rem; }
+    .phil-item h4 { font-family:var(--font-display); font-size:1.05rem; letter-spacing:0.04em; color:var(--signal); margin-bottom:0.75rem; }
+    .phil-item p { font-size:0.86rem; color:var(--muted); }
+    @media(max-width:860px){ .about-hero{grid-template-columns:1fr;} .phil-grid{grid-template-columns:1fr;} .tl-row{grid-template-columns:1fr;gap:0.5rem;} }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Fail <em>Smarter</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="framework.html">Framework</a></li>
+    <li><a href="cases.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+</nav>
+<div class="issue-bar">
+  <span>The analyst</span><span class="issue-title">Juan Matos</span><span>Nearly 20 years. Both sides of the table.</span>
+</div>
+<section class="container">
+  <div class="about-hero">
+    <div>
+      <div class="label" style="margin-bottom:1.25rem;">The Analyst</div>
+      <h1>Juan<br><em>Matos.</em></h1>
+      <p style="margin-top:2rem;">Nearly 20 years across telecom operations, financial analysis, and managed services. Operator side and vendor side. The framework is built by someone who has watched what breaks in production environments serving real operators — not someone who has read about it.</p>
+      <p>Currently heading Maintenance & Managed Services at Incognito Software Systems, responsible for post-deployment operations across a global portfolio spanning NA, EMEA, and APAC.</p>
+      <p>Having been on both sides makes it possible to engage credibly across levels. That same discipline is what Fail Smarter applies to business ideas: rigorous analysis, no narrative bias, no hype.</p>
+      <p style="color:var(--muted); font-size:0.88rem; margin-top:1.5rem;">Greater Toronto Area, Canada · Dominican Republic · English / Spanish</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div class="fact-row"><div class="fact-k">Role</div><div class="fact-v">Head, M&MS — Incognito Software Systems</div></div>
+        <div class="fact-row"><div class="fact-k">Based</div><div class="fact-v">Greater Toronto Area, Canada</div></div>
+        <div class="fact-row"><div class="fact-k">Domain</div><div class="fact-v">Telecom ops · OSS/BSS · RAN / 5G · Managed Services</div></div>
+        <div class="fact-row"><div class="fact-k">Education</div><div class="fact-v">MS Telecom Engineering — Rochester Institute of Technology</div></div>
+        <div class="fact-row"><div class="fact-k">Languages</div><div class="fact-v">English · Spanish (native)</div></div>
+        <div class="fact-row"><div class="fact-k">Connect</div><div class="fact-v"><a href="https://www.linkedin.com/in/juanmiguelmatos" style="color:var(--signal);">LinkedIn →</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container tl-section">
+  <div class="label" style="margin-bottom:1rem;">Career</div>
+  <h2>Background.</h2>
+  <div class="tl-items">
+    <div class="tl-row"><div class="tl-period">2025 — Present</div><div class="tl-content"><h4>Head of Maintenance & Managed Services</h4><div class="tl-co">Incognito Software Systems</div><p>Global portfolio of service providers across on-premises and SaaS OSS environments. NA, EMEA, APAC. Senior escalation point, operational KPIs, commercial dimension with Sales.</p></div></div>
+    <div class="tl-row"><div class="tl-period">2018 — 2025</div><div class="tl-content"><h4>Director, Sales Engineering & Support</h4><div class="tl-co">BLiNQ Networks</div><p>Progressive leadership across Sales Engineering and Wireless Technical Support. Full customer lifecycle through LTE and 5G build-out. 24×7 support models, escalation management.</p></div></div>
+    <div class="tl-row"><div class="tl-period">2012 — 2018</div><div class="tl-content"><h4>Sr. Planning & Design Engineer</h4><div class="tl-co">Claro RD</div><p>In-building and small cell deployments. Annual investment plans, DAS deployments at scale, vendor trials. Operator-side foundation in capital planning and network performance.</p></div></div>
+    <div class="tl-row"><div class="tl-period">2008 — 2017</div><div class="tl-content"><h4>Adjunct Professor — RF & Wireless</h4><div class="tl-co">Instituto Tecnológico de Santo Domingo</div><p>Nine years teaching Wireless Networks, RF Propagation, and Telecommunications Engineering alongside full-time engineering career.</p></div></div>
+    <div class="tl-row"><div class="tl-period">2008 — 2012</div><div class="tl-content"><h4>Service Delivery Manager</h4><div class="tl-co">Wind Telecom S.A.</div><p>Corporate and SME solutions across WiMAX, PTP, PTMP, and fiber. End-to-end service ownership, direct customer accountability.</p></div></div>
+    <div class="tl-row"><div class="tl-period">2004 — 2008</div><div class="tl-content"><h4>QA Engineer / Testing Lead</h4><div class="tl-co">Verizon</div><p>Quality assurance and system validation. Cross-functional coordination, testing strategy, delivery accountability.</p></div></div>
+  </div>
+</section>
+<section class="container" style="padding:4rem 0 5rem;">
+  <div class="label" style="margin-bottom:1rem;">Why this exists</div>
+  <h2>Philosophy.</h2>
+  <div class="phil-grid">
+    <div class="phil-item"><h4>Budgeting is the wrong constraint</h4><p>Optimizing spend doesn't move the needle when income is the binding constraint. The shift is from "spend less" to "earn more per hour of invested time."</p></div>
+    <div class="phil-item"><h4>W2 employment doesn't scale</h4><p>More hours don't produce more income in a salaried role. Non-linear income requires building something that earns while you're not working.</p></div>
+    <div class="phil-item"><h4>Failure is the data</h4><p>The lessons from failures outweigh the lessons from success. Rapid iteration and willingness to kill ideas fast are the core discipline — not optimism.</p></div>
+    <div class="phil-item"><h4>The framework is the asset</h4><p>No single idea needs to be a home run. A portfolio of semi-automated initiatives each clearing the 1.5× floor compounds regardless of individual outcomes.</p></div>
+  </div>
+</section>
+<footer><div class="footer-logo">Fail <em>Smarter</em></div><p>Framework. Analysis. No hype.</p></footer>
+</body>
+</html>
