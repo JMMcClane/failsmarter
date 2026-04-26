@@ -2,58 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Fail Smarter</title>
+  <title>Off The Charts — Fail Smarter</title>
+  <meta name="description" content="Analytical thinking applied anywhere. Lottery odds, bloodwork, business ideas — same rigour, any domain." />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .stream-label { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; display:flex; align-items:center; gap:1rem; padding:2.5rem 0 0; }
-    .stream-label::after { content:''; flex:1; height:1px; background:var(--border); }
-    .stream-label.fw { color:var(--signal); }
-    .stream-label.oc { color:#60a5fa; }
+    .blog-card-live { cursor: pointer; }
+    .blog-card-live h3 { transition: color 0.15s; }
+    .blog-card-live:hover h3 { color: var(--signal); }
+    .live-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4ade80;
+      border: 1px solid #4ade80;
+      padding: 0.15rem 0.5rem;
+    }
+    .coming-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
 <nav>
   <div class="nav-logo">Fail <em>Smarter</em></div>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li><li><a href="framework.html">Framework</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="framework.html">Framework</a></li>
     <li><a href="cases.html">Case Studies</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li><li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Off The Charts</a></li>
+    <li><a href="about.html">About</a></li>
   </ul>
 </nav>
 <div class="issue-bar">
-  <span>Framework · Off The Charts</span><span class="issue-title">The Blog</span><span>Same rigour. Any domain.</span>
+  <span>Analytical thinking</span>
+  <span class="issue-title">Off The Charts</span>
+  <span>Any domain. Same rigour.</span>
 </div>
+
 <section style="padding:5rem 0 3rem; border-bottom:1px solid var(--border);">
   <div class="container">
-    <div class="label" style="margin-bottom:1rem;">Thinking out loud</div>
-    <h1>The<br><em>Blog.</em></h1>
-    <p style="max-width:52ch; margin-top:2rem; color:var(--muted);">Two streams. <strong style="color:var(--signal)">Framework</strong> — methodology and analytical thinking that feeds Fail Smarter. <strong style="color:#60a5fa">Off The Charts</strong> — same rigour, different domain.</p>
+    <div class="label" style="margin-bottom:1rem;">Analytical thinking, any domain</div>
+    <h1>Off The<br><em>Charts.</em></h1>
+    <p style="max-width:52ch; margin-top:2rem; color:var(--muted);">The same analytical lens that evaluates business ideas — applied to anything worth examining. Lottery odds, bloodwork, coffee molecules, probability, health, money. No domain is off limits. The rigour is always the same.</p>
   </div>
 </section>
+
 <div class="container" style="padding-bottom:6rem;">
-  <div class="stream-label fw">Framework</div>
-  <div class="blog-list" style="margin-bottom:0;">
-    <div class="blog-card">
-      <div><div class="blog-tag tag-fw">Framework</div><h3>How I Value My Time — And Why $100/hr Is A Lie</h3><p>The honest exercise of defining OPEX when your hours have no reliable market rate. What expected value math actually says, and how the Tim Hortons floor became the anchor.</p></div>
-      <div class="blog-date">Coming soon</div>
+  <div class="blog-list" style="margin-top:0;">
+
+    <div class="blog-card blog-card-live" onclick="location.href='blog/the-molecule-in-my-morning-coffee.html'">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="blog-tag tag-oc" style="margin:0;">Off The Charts</span>
+          <span class="live-tag">Live</span>
+          <span class="mono muted" style="font-size:0.58rem;">Issue 002</span>
+        </div>
+        <h3>The Molecule in My Morning Coffee</h3>
+        <p>A routine blood test, a broken healthcare system, and an AI conversation that found what a doctor couldn't be bothered to look for. On cafestol, LDL particle quality, and what the Trig/HDL ratio actually tells you.</p>
+      </div>
+      <div class="blog-date">Apr 2025</div>
     </div>
-    <div class="blog-card">
-      <div><div class="blog-tag tag-fw">Framework</div><h3>The Lifestyle Design Layer — What Money Actually Unlocks</h3><p>Defining four thresholds that turn abstract dollar targets into concrete life changes.</p></div>
-      <div class="blog-date">Coming soon</div>
+
+    <div class="blog-card blog-card-live" onclick="location.href='blog/the-odds-youre-getting-wrong.html'">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="blog-tag tag-oc" style="margin:0;">Off The Charts</span>
+          <span class="live-tag">Live</span>
+          <span class="mono muted" style="font-size:0.58rem;">Issue 001</span>
+        </div>
+        <h3>The Odds You're Getting Wrong</h3>
+        <p>Most people are mispricing probability in two directions simultaneously. The lottery and insurance tell the same story from opposite ends — and the financial consequences compound against you for decades.</p>
+      </div>
+      <div class="blog-date">Apr 2025</div>
     </div>
+
     <div class="blog-card">
-      <div><div class="blog-tag tag-fw">Framework</div><h3>Why Ideas Are Cheap and the Framework Is the Asset</h3><p>On the portfolio mindset — why no single idea needs to be a home run.</p></div>
-      <div class="blog-date">Coming soon</div>
+      <div>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="blog-tag tag-fw" style="margin:0;">Framework</span>
+          <span class="coming-tag">Coming soon</span>
+        </div>
+        <h3>How I Value My Time — And Why $100/hr Is A Lie</h3>
+        <p>The honest exercise of defining OPEX when your hours have no reliable market rate. What expected value math actually says, and how the Tim Hortons floor became the anchor.</p>
+      </div>
+      <div class="blog-date">—</div>
     </div>
-  </div>
-  <div class="stream-label oc" style="margin-top:1rem;">Off The Charts</div>
-  <div class="blog-list" style="margin-bottom:0;">
+
     <div class="blog-card">
-      <div><div class="blog-tag tag-oc">Off The Charts</div><h3>Cafestol, LDL, and the Coffee Study Nobody Talks About</h3><p>A deep dive into the cardiovascular impact of unfiltered coffee. What the data actually says, what the headlines got wrong.</p></div>
-      <div class="blog-date">Coming soon</div>
+      <div>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="blog-tag tag-fw" style="margin:0;">Framework</span>
+          <span class="coming-tag">Coming soon</span>
+        </div>
+        <h3>The Lifestyle Design Layer — What Money Actually Unlocks</h3>
+        <p>Defining four thresholds that turn abstract dollar targets into concrete life changes. Why $1,750/month is more asymmetric than $12,000/month.</p>
+      </div>
+      <div class="blog-date">—</div>
     </div>
+
+    <div class="blog-card">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="blog-tag tag-fw" style="margin:0;">Framework</span>
+          <span class="coming-tag">Coming soon</span>
+        </div>
+        <h3>Why Ideas Are Cheap and the Framework Is the Asset</h3>
+        <p>On the portfolio mindset — why no single idea needs to be a home run, and how the 1.5× floor compounds across multiple semi-automated initiatives.</p>
+      </div>
+      <div class="blog-date">—</div>
+    </div>
+
   </div>
 </div>
+
 <footer><div class="footer-logo">Fail <em>Smarter</em></div><p>Framework. Analysis. No hype.</p></footer>
 </body>
 </html>
